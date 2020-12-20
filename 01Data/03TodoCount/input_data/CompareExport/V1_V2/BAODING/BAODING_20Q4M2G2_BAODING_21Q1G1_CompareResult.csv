@@ -1,0 +1,10 @@
+﻿Type,Count,None,Add,Delete,ModifyProperty,ModifyGEO,ModifyAll,DelToAdd,AddToDel,Treated
+Link,28,0,10,6,5,4,3,0,0,0
+Node,8,0,4,2,0,2,0,0,0,0
+Cross,658,658,0,0,0,0,0,0,0,0
+CrossLink,936,936,0,0,0,0,0,0,0,0
+CrossNode,1908,1907,1,0,0,0,0,0,0,0
+LinkForm,22850,22850,0,0,0,0,0,0,0,0
+NodeForm,17816,17808,5,3,0,0,0,0,0,0
+CrossLinkOuter,4726,4719,5,2,0,0,0,0,0,0
+LaneConnexity,559,556,2,1,0,0,0,0,0,0
