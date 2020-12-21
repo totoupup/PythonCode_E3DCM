@@ -1,0 +1,20 @@
+!table
+!version 900
+!charset Neutral
+
+Definition Table
+  Type NATIVE Charset "Neutral"
+  Fields 13
+    FID Integer ;
+    NODE_PID Float ;
+    KIND Smallint ;
+    ADAS_FLAG Smallint ;
+    EDIT_FLAG Smallint ;
+    DIF_GROUPI Char (200) ;
+    SRC_FLAG Smallint ;
+    DIGITAL_LE Smallint ;
+    RESERVED Char (254) ;
+    U_RECORD Smallint ;
+    U_FIELDS Char (254) ;
+    U_DATE Char (14) ;
+    ROW_ID Char (80) ;

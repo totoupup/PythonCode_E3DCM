@@ -1,0 +1,68 @@
+!table
+!version 900
+!charset Neutral
+
+Definition Table
+  Type NATIVE Charset "Neutral"
+  Fields 61
+    FID Integer ;
+    LINK_PID Float ;
+    S_NODE_PID Float ;
+    E_NODE_PID Float ;
+    KIND Smallint ;
+    DIRECT Smallint ;
+    APP_INFO Smallint ;
+    TOLL_INFO Smallint ;
+    ROUTE_ADOP Smallint ;
+    MULTI_DIGI Smallint ;
+    DEVELOP_ST Smallint ;
+    IMI_CODE Smallint ;
+    SPECIAL_TR Smallint ;
+    FUNCTION_C Smallint ;
+    URBAN Smallint ;
+    PAVE_STATU Smallint ;
+    LANE_NUM Smallint ;
+    LANE_LEFT Smallint ;
+    LANE_RIGHT Smallint ;
+    TRANS_AREA Smallint ;
+    LANEWIDTHL Smallint ;
+    LANEWIDTHR Smallint ;
+    LANE_CLASS Smallint ;
+    WIDTH Integer ;
+    IS_VIADUCT Smallint ;
+    LEFT_REGIO Float ;
+    RIGHT_REGI Float ;
+    LENGTH Float ;
+    ONEWAY_MAR Smallint ;
+    MESH_ID Integer ;
+    STREET_LIG Smallint ;
+    PARKING_LO Smallint ;
+    ADAS_FLAG Smallint ;
+    SIDEWALK_F Smallint ;
+    WALKSTAIR_ Smallint ;
+    NONMOTOR_F Smallint ;
+    LEISURE_TY Smallint ;
+    DICI_TYPE Smallint ;
+    WALK_FLAG Smallint ;
+    DIF_GROUPI Char (200) ;
+    SRC_FLAG Smallint ;
+    EDIT_FLAG Smallint ;
+    TRUCK_FLAG Smallint ;
+    FEE_STD Integer ;
+    FEE_FLAG Smallint ;
+    SYSTEM_ID Integer ;
+    ORG_LINKID Float ;
+    CENTER_DIV Smallint ;
+    PARKING_FL Smallint ;
+    ADAS_MEMO Integer ;
+    MEMO Char (200) ;
+    RESERVED Char (254) ;
+    REF_LINK_P Float ;
+    REF_LINK_D Smallint ;
+    DENS_LINK_ Float ;
+    DENS_LIN_1 Smallint ;
+    U_RECORD Smallint ;
+    U_FIELDS Char (254) ;
+    U_DATE Char (14) ;
+    ROW_ID Char (80) ;
+    ACCURACY Smallint ;
