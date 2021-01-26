@@ -19,10 +19,29 @@ app = wx.App()
 
 #自定义窗口类MyFrame
 class MyFrame(wx.Frame):
+    
     def __init__(self):
+        
         super().__init__(None,title="Log Check",pos=(600,300),size=(500,400))
-        panel = wx.Panel(parent=self)
-        self.statictext = wx.StaticText(parent=panel,label="打开log所在文件夹",pos=(610,610))
+        
+        panel = wx.Panel(parent=self)#创建面板对象
+        
+        self.statictext = wx.StaticText(parent=panel,label="open log",pos=(110,20))#创建静态文本对象
+        
+        b = wx.Button(parent=panel, label='...',pos=(100,50))
+        
+        self.Bind(wx.EVT_BUTTON, self.on_click, b)
+        
+        dialog = wx.FileDialog(parent=panel, pos=(10,50))#创建对象
+        
+    def on_click(self, event):#把
+        self.statictext.SetLabelText("log selected！")
+        
+        
+        
+    def open_file(self, event):
+        self.Filename.GetFilename()
+        self.Filename.SetFilename()
 
 frm = MyFrame()
 frm.Show()        
@@ -34,3 +53,8 @@ frm.Show()
 
 #进入主事件循环
 app.MainLoop()
+
+pathtext = wx.TextCtrl(parent=panel, pos = (5,5),size = (350,24))
+pathtext.GetLineText()
+wx.FileDialog()
+
