@@ -21,13 +21,15 @@ class MyFrame(wx.Frame):
         
         self.statictext = wx.StaticText(parent=panel,label="open log",pos=(60,20))#创建静态文本对象
         
-        filepath_text = wx.TextCtrl(parent=panel,pos=(60,50),size=(350,25))#【文本控件1】
+        filepath_text = wx.TextCtrl(parent=panel,value="",pos=(60,50),size=(350,25))#【文本控件1】
         
         open_button = wx.Button(parent=panel, label='...',pos=(430,50))#【按钮控件】
         
         log_text = wx.TextCtrl(parent=panel,pos=(60,90),size=(450,200),style=wx.TE_MULTILINE)#【文本控件2】
         
         self.Bind(wx.EVT_BUTTON, self.onButton, open_button)#
+        
+        filepath_text.SetValue(self.onButton(''))
         
         
 # =============================================================================
@@ -41,12 +43,16 @@ class MyFrame(wx.Frame):
                                                wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
          
         openFileDialog.ShowModal()
+        path = openFileDialog.GetPath()        
+        print(path)
         
-        print(openFileDialog.GetPath())
-        openFileDialog.Destroy()        
+        openFileDialog.Destroy()
         
+        return path        
+     
+    
         
-
+    
 
 # #创建窗口对象
 frm = MyFrame()
