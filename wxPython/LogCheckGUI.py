@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+# =============================================================================
+#                   输入文件——点选、复制、拖拽
+# 
+# =============================================================================
 """
 Created on Mon Jan 25 15:03:05 2021
 @author: zhutong
@@ -19,15 +23,15 @@ class MyFrame(wx.Frame):
         
         panel = wx.Panel(parent=self)#创建面板对象
         
-        self.statictext = wx.StaticText(parent=panel,label="open log",pos=(60,20))#创建静态文本对象
+        #self.statictext = wx.StaticText(parent=panel,label="open log",pos=(60,20))#创建静态文本对象
         
-        self.filepath_text = wx.TextCtrl(parent=panel,value="",pos=(60,50),size=(350,25))#【文本控件1】
+        self.filepath_text = wx.TextCtrl(parent=panel,value="",pos=(60,40),size=(350,25))#【文本控件1】
         
-        open_button = wx.Button(parent=panel, label='...',pos=(430,50))#【按钮控件2】
+        open_button = wx.Button(parent=panel, label='Open',pos=(430,40))#【按钮控件2】
         
-        check_button = wx.Button(parent=panel, label='check',pos=(60,85))#【按钮控件2】
+        check_button = wx.Button(parent=panel, label='Check',pos=(60,85))#【按钮控件2】
         
-        clear_button = wx.Button(parent=panel, label='clear',pos=(330,85))#【按钮控件3】
+        clear_button = wx.Button(parent=panel, label='Clear',pos=(330,85))#【按钮控件3】
         
         self.log_text = wx.TextCtrl(parent=panel,pos=(60,120),size=(450,200),style=wx.TE_MULTILINE)#【文本控件2】
         
@@ -35,7 +39,16 @@ class MyFrame(wx.Frame):
         
         self.Bind(wx.EVT_BUTTON, self.onButton_check, check_button)#绑定事件2
         
-        self.Bind(wx.EVT_BUTTON, self.onButton_clear, clear_button)#绑定事件2
+        self.Bind(wx.EVT_BUTTON, self.onButton_clear, clear_button)#绑定事件3
+        
+        self.Bind(wx.EVT_TEXT, self.text_record, self.filepath_text)#绑定事件4
+        
+# =============================================================================
+#         dlg = wx.MessageDialog(None, ’所选择的不是log文件!’,
+#                       ’错误’, wx.YES_NO | wx.ICON_QUESTION)
+#         result = dlg.ShowModal()
+#         dlg.Destroy()
+# =============================================================================
         
         
 # =============================================================================
@@ -54,7 +67,12 @@ class MyFrame(wx.Frame):
         
         openFileDialog.Destroy()
         self.filepath_text.SetValue(self.path)#将路径显示在文本框1中
-        return self.path     
+        
+        self.log_text.Clear()
+        return self.path    
+    
+    def text_record(self,event):
+        self.path = self.filepath_text.GetValue()
     
     def onButton_check(self,event):
         #error_ls=[]
