@@ -27,7 +27,7 @@ class MyFrame(wx.Frame):
         
         self.filepath_text = wx.TextCtrl(parent=panel,value="",pos=(60,40),size=(350,25))#【文本控件1】
         
-        open_button = wx.Button(parent=panel, label='Open',pos=(430,40))#【按钮控件2】
+        open_button = wx.Button(parent=panel, label='Open',pos=(430,40))#【按钮控件1】
         
         check_button = wx.Button(parent=panel, label='Check',pos=(60,85))#【按钮控件2】
         
