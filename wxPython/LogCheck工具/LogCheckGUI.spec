@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['LogCheckGUI.py'],
-             pathex=['D:\\PythonCode_E3DCM\\wxPython'],
+             pathex=['D:\\PythonCode_E3DCM\\wxPython\\LogCheck工具'],
              binaries=[],
              datas=[],
              hiddenimports=[],

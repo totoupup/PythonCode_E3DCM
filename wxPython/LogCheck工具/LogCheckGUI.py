@@ -57,7 +57,7 @@ class MyFrame(wx.Frame):
 # =============================================================================
     def onButton_open(self,event):#在事件源（控件）上产生特定事件（左键单击）后的处理程序        
         # Create open file dialog
-        openFileDialog = wx.FileDialog(None, "Open", "", "", 
+        openFileDialog = wx.FileDialog(None, "...", "", "", 
                                               "(*.log)|*.log", 
                                                wx.FD_OPEN | wx.FD_FILE_MUST_EXIST)
          

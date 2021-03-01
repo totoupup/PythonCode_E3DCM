@@ -1,10 +1,10 @@
-# -*- mode: python ; coding: utf-8 -*-
+# -*- mode: python -*-
 
 block_cipher = None
 
 
 a = Analysis(['CommonProjectionGUI.py'],
-             pathex=['D:\\PythonCode_E3DCM\\wxPython\\CommonProjectionå·¥å…·'],
+             pathex=['D:\\PythonCode_E3DCM\\wxPython\\CommonProjection¹¤¾ß'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -28,6 +28,5 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
-          upx_exclude=[],
           runtime_tmpdir=None,
-          console=True )
+          console=False )
